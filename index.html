@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idle Zoo</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+</head>
+<body>
+    <img src="/assets/persoTuto.png" id="persoTuto">
+    <btn id="btnFinishTuto" onclick="hideTuto(this)">OK !</btn>
+    <div id="btnArgent">
+        <p id="txtArgent">0$</p>
+        <img src="./assets/btnArgent.png" id="imgBtnArgent">
+    </div>
+    <div id="btnArgentSeconde">
+        <p id="txtArgentSeconde">0$/s</p>
+        <img src="./assets/btnArgentSeconde.png" id="imgBtnArgentSeconde">
+    </div>
+    <img src="/assets/coin.png" id="coinBonus" onclick="generateBonus()">
+    <button id="btnMenu" onclick="toggleMenu()">MENU</button>
+
+    <div id="menu">
+        <div id="enclo1Menu">
+            <img src="./assets/poteau.png" id="poteauGaucheEnclos1">
+            <img src="./assets/poteau.png" id="poteauDroitEnclos1">
+            <h2 id="titreEnclo">ZEBRE</h2>
+            <div id="infoArgentEnclos">
+                <button id="nbArgentClicEnclos1">1$/clic</button>
+                <button id="nbArgenSecondeEnclos1">0$/s</button>
+            </div>
+            <div class="ameliorerEnclos">
+                <p id="niveauEnclos1">NIVEAU 1</p>
+                <button id="btnAmeliorerLevelEnclos1" onclick="upgrade('level', 'Enclos1', this, 'niveauEnclos1', 'Zebre')">200$</button>
+                <p id="niveauClicEnclos1">$/S | NIVEAU 0</p>
+                <button id="btnAmeliorerClicEnclos1" onclick="upgrade('autoclic', 'Enclos1', this, 'niveauClicEnclos1')">50$</button>
+            </div>
+        </div>
+        <div id="enclo2Menu">
+            <img src="./assets/poteau.png" id="poteauGaucheEnclos2">
+            <img src="./assets/poteau.png" id="poteauDroitEnclos2">
+            <h2 id="titreEnclo">HYENNE</h2>
+            <div id="infoArgentEnclos">
+                <button id="nbArgentClicEnclos2">0$/clic</button>
+                <button id="nbArgenSecondeEnclos2">0$/s</button>
+            </div>
+            <div class="ameliorerEnclos">
+                <p id="niveauEnclos2">NIVEAU 0</p>
+                <button id="btnAmeliorerLevelEnclos2" onclick="upgrade('level', 'Enclos2', this, 'niveauEnclos2', 'Hyennes')">2k$</button>
+                <p id="niveauClicEnclos2">$/S | NIVEAU 0</p>
+                <button id="btnAmeliorerClicEnclos2" onclick="upgrade('autoclic', 'Enclos2', this, 'niveauClicEnclos2')">500$</button>
+            </div>
+        </div>
+        <div id="enclo3Menu">
+            <img src="./assets/poteau.png" id="poteauGaucheEnclos3">
+            <img src="./assets/poteau.png" id="poteauDroitEnclos3">
+            <h2 id="titreEnclo">GIRAFE</h2>
+            <div id="infoArgentEnclos">
+                <button id="nbArgentClicEnclos3">0$/clic</button>
+                <button id="nbArgenSecondeEnclos3">0$/s</button>
+            </div>
+            <div class="ameliorerEnclos">
+                <p id="niveauEnclos3">NIVEAU 0</p>
+                <button id="btnAmeliorerLevelEnclos3" onclick="upgrade('level', 'Enclos3', this, 'niveauEnclos3', 'Girafe')">20k$</button>
+                <p id="niveauClicEnclos3">$/S | NIVEAU 0</p>
+                <button id="btnAmeliorerClicEnclos3" onclick="upgrade('autoclic', 'Enclos3', this, 'niveauClicEnclos3')">5k$</button>
+            </div>
+        </div>
+        <div id="enclo4Menu">
+            <img src="./assets/poteau.png" id="poteauGaucheEnclos4">
+            <img src="./assets/poteau.png" id="poteauDroitEnclos4">
+            <h2 id="titreEnclo">ELEPHANT</h2>
+            <div id="infoArgentEnclos">
+                <button id="nbArgentClicEnclos4">0$/clic</button>
+                <button id="nbArgenSecondeEnclos4">0$/s</button>
+            </div>
+            <div class="ameliorerEnclos">
+                <p id="niveauEnclos4">NIVEAU 0</p>
+                <button id="btnAmeliorerLevelEnclos4" onclick="upgrade('level', 'Enclos4', this, 'niveauEnclos4', 'Elephant')">200k$</button>
+                <p id="niveauClicEnclos4">$/S | NIVEAU 0</p>
+                <button id="btnAmeliorerClicEnclos4" onclick="upgrade('autoclic', 'Enclos4', this, 'niveauClicEnclos4')">50k$</button>
+            </div>
+        </div>
+        <div id="enclo5Menu">
+            <img src="./assets/poteau.png" id="poteauGaucheEnclos5">
+            <img src="./assets/poteau.png" id="poteauDroitEnclos5">
+            <h2 id="titreEnclo">LION</h2>
+            <div id="infoArgentEnclos">
+                <button id="nbArgentClicEnclos5">0$/clic</button>
+                <button id="nbArgenSecondeEnclos5">0$/s</button>
+            </div>
+            <div class="ameliorerEnclos">
+                <p id="niveauEnclos5">NIVEAU 0</p>
+                <button id="btnAmeliorerLevelEnclos5" onclick="upgrade('level', 'Enclos5', this, 'niveauEnclos5', 'Lion')">2M$</button>
+                <p id="niveauClicEnclos5">$/S | NIVEAU 0</p>
+                <button id="btnAmeliorerClicEnclos5" onclick="upgrade('autoclic', 'Enclos5', this, 'niveauClicEnclos5')">500k$</button>
+            </div>
+        </div>
+        <img src="./assets/poteauHorizon.png" id="poteauHorizon">
+        <button id="btnCloseMenu" onclick="toggleMenu()">CLOSE</button>
+    </div>
+
+    <div id="popupBonus">
+        <img src="./assets/poteau.png" id="poteauGauche1MenuBonus">
+        <img src="./assets/poteau.png" id="poteauGauche2MenuBonus">
+        <img src="./assets/poteau.png" id="poteauGauche3MenuBonus">
+        <img src="./assets/poteau.png" id="poteauDroite1MenuBonus">
+        <img src="./assets/poteau.png" id="poteauDroite2MenuBonus">
+        <img src="./assets/poteau.png" id="poteauDroite3MenuBonus">
+        <h1 id="titreBonus">BONUS</h1>
+        <h3 id="txtBonus">CHAQUE CLIC SUR L'ENCLO ### EST MULTIPLIE PAR ##</h3>
+        <img src="./assets/poteauHorizon.png" id="poteauHorizonBonus">
+        <button id="btnCloseMenuBonus" >OK</button>
+    </div>
+
+    <div id="bonusCountdown">
+        <p>Bonus : 00:00</p>
+    </div>
+
+    <div id="enclo1" onclick="moreMoney('Enclos1', event)">
+        <img src="./assets/Zebre/enclosLevel1.png" id="imgEnclos1">
+    </div>
+
+    <div id="enclo2" onclick="moreMoney('Enclos2', event)">
+        <img src="./assets/Hyennes/enclosLevel0.png" id="imgEnclos2">
+    </div>
+
+    <div id="enclo3" onclick="moreMoney('Enclos3', event)">
+        <img src="./assets/Girafe/enclosLevel0.png" id="imgEnclos3">
+    </div>
+
+    <div id="enclo4" onclick="moreMoney('Enclos4', event)">
+        <img src="./assets/Elephant/enclosLevel0.png" id="imgEnclos4">
+    </div>
+
+    <div id="enclo5" onclick="moreMoney('Enclos5', event)">
+        <img src="./assets/Lion/enclosLevel0.png" id="imgEnclos5">
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+</html>
