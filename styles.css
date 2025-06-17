@@ -2,6 +2,15 @@ body {
     background-image: url('./assets/ChatGPT_Image_26_mai_2025_12_38_24.png');
 }
 
+#btnResetGame {
+    position: absolute;
+    z-index: 9999999999999;
+
+    top: 90% !important;
+    left: 90% !important;
+    padding-right: 140px;
+}
+
 #persoTuto {
     width: 35%;
     position: absolute;
@@ -302,7 +311,7 @@ body {
     height: 33px;
 }
 
-#btnCloseMenu, #btnCloseMenuBonus, #btnMenu, #btnFinishTuto {
+#btnCloseMenu, #btnCloseMenuBonus, #btnMenu, #btnFinishTuto, #btnResetGame {
     position: absolute;
     z-index: 9999998;
     top : 101.5%;
@@ -427,7 +436,7 @@ body {
     font-size: 25px;
 }
 
-#bonusCountdown{
+#bonusCountDown{
     position: absolute;
     display: none;
     right: 2%;
