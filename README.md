@@ -17,8 +17,13 @@
 
 ---
 
+## 📸 Aperçu
+
+![Capture du jeu](assets/clicker-zoo-preview.png)
+
 ## 🚀 Installation
 
 1. Téléchargez ou clonez ce dépôt :
    ```bash
    git clone https://github.com/samuelblry/Clicker.git
+2. Lancer le fichier HTML via Go Live
