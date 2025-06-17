@@ -19,7 +19,7 @@
 
 ## 📸 Aperçu
 
-![Capture du jeu](assets/clicker-zoo-preview.png)
+![Capture du jeu](assets/preview.png)
 
 ## 🚀 Installation
 
